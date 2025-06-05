@@ -14,14 +14,12 @@ import "./globals.css";
 export default function Home() {
   return (
     <div className="">
-      <Navbar/>
       <HeroSection/>
       <OurCategory/>
       <NewIn/>
       <AboutUs/>
       <FollowUs/>
       <TextMoving/>
-      <Footer/>
 
     </div>
   );

@@ -1,77 +1,64 @@
 import React, { useState } from "react";
-import { DMseri } from "./HeroSection";
+import { DMseri } from "../../../../components/HeroSection";
 import Link from "next/link";
-import { inter } from "./Navbar";
+import { inter } from "../../../../components/Navbar";
 import Marquee from "react-fast-marquee";
 
-// function isSoldOut(soldout){
-//   if(!soldout){
-//     return (
-
-//       <>
-//         <button className='primary-btn-black absolute '> Sold out</button>
-//       </>
-
-//     );
-//   }
-// }
-
-function NewIn() {
+function YouMayAlsoLike() {
   const [isHovered, setIsHovered] = useState(false);
-
   const images = [
     {
       id: 1,
-      src: "images/h_pro_img_1.jpg",
+      src: "/images/h_pro_img_1.jpg",
       isAvail: true,
       name: "Gucci bag ",
       price: 249,
     },
     {
       id: 2,
-      src: "images/h_pro_img_2.jpg",
+      src: "/images/h_pro_img_2.jpg",
       isAvail: false,
       name: "Ivy & Oak Set ",
       price: 255,
     },
     {
       id: 3,
-      src: "images/h_pro_img_3.jpg",
+      src: "/images/h_pro_img_3.jpg",
       isAvail: true,
       name: "Ivy & Oak Set ",
       price: 69,
     },
     {
       id: 4,
-      src: "images/h_pro_img_4.jpg",
+      src: "/images/h_pro_img_4.jpg",
       isAvail: true,
       name: "Ivy & Oak Set ",
       price: 189,
     },
     {
       id: 5,
-      src: "images/h_pro_img_2.jpg",
+      src: "/images/h_pro_img_2.jpg",
       isAvail: true,
       name: "Ivy & Oak Set ",
       price: 255,
     },
     {
       id: 6,
-      src: "images/h_pro_img_3.jpg",
+      src: "/images/h_pro_img_3.jpg",
       isAvail: true,
       name: "Ivy & Oak Set ",
       price: 69,
     },
     {
       id: 7,
-      src: "images/h_pro_img_4.jpg",
+      src: "/images/h_pro_img_4.jpg",
       isAvail: true,
       name: "Ivy & Oak Set ",
       price: 329,
     },
     {
       id: 8,
-      src: "images/h_pro_img_1.jpg",
+      src: "/images/h_pro_img_1.jpg",
       isAvail: false,
       name: "Ivy & Oak Set ",
       price: 329,
@@ -80,13 +67,13 @@ function NewIn() {
 
   return (
     <div>
-      <div className="main ">
-        <div>
-          <div className="new-in  pt-[100px] pb-[120px]">
-            <div className="container">
-              <div className="section-heading ">
-                <h2 className={`${DMseri.className}`}>New in</h2>
-              </div>
+      <div className="main">
+        <div className="container">
+          <div className="YMALsection">
+            <div className="YMALSectionHead pt-[80px] mb-[25px] border-t-1 border-[#d6d6d6]">
+              <h4 className="text-[32px] leading-[1.25]">You May Also Like</h4>
+            </div>
+            <div className="YMALSectionBody">
               <div className="Newin-body flex max-w[100%]  flex-wrap pt-[44px] ">
                 {images.map((items) => (
                   <Link href="/" key={items.id}>
@@ -135,4 +122,4 @@ function NewIn() {
   );
 }
 
-export default NewIn;
+export default YouMayAlsoLike;

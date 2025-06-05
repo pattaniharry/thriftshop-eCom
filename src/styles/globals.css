@@ -1,0 +1,314 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+
+.nav li a {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 1200px;
+  margin: auto;
+}
+
+.image-box::after {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.primary-btn-white {
+  display: block;
+  padding: 0 32px;
+  min-width: 127px;
+  height: 48px;
+  border-radius: 4px;
+  text-align: center;
+  background: #ffffff;
+  color: #000000;
+  box-shadow: none;
+  border: 2px solid black;
+  border-width: 1px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  line-height: 46px;
+}
+.primary-btn-black {
+  display: block;
+  padding: 0 32px;
+  min-width: 127px;
+  height: 48px;
+  border-radius: 4px;
+  text-align: center;
+  background: #111111;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+  border-width: 1px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  line-height: 46px;
+}
+.primary-btn-blackNR {
+  display: block;
+  padding: 0 32px;
+  min-width: 127px;
+  height: 48px;
+  text-align: center;
+  background: #111111;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+  border-width: 1px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  line-height: 46px;
+}
+
+.primary-btn-black:hover {
+  background-color: #323232;
+}
+
+.primary-btn-white:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid white;
+}
+.primary-btn-white Link:hover .image-box {
+  transform: scale(1.3);
+}
+
+.StartSelling_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 79px;
+  text-align: center;
+}
+.StartSelling_block p {
+  padding-top: 16px;
+  padding-bottom: 40px;
+}
+
+.mySwiper SwiperSlide {
+  font-size: 200px;
+}
+
+.swiper-slide {
+  width: fit-content;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.left-links ul li {
+  padding-top: 16px;
+  color: #323232;
+}
+
+.left-links ul li:hover {
+  color: black;
+}
+
+.custom-marquee-container {
+  position: absolute;
+  top: 50%;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  border-top: solid white 1px;
+  border-bottom: solid white 1px;
+}
+
+/* Shop */
+
+/*Categories section customm checkboxes*/
+
+.containerCB {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCB input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCB:hover input ~ .checkmark {
+  background-color: hsl(0, 0%, 80%);
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCB input:checked ~ .checkmark {
+  background-color: #000000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: " ";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCB input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCB .checkmark:after {
+  left: 10px;
+  top: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.szh-accordion__item-panel {
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+.pro-desc p {
+  margin-top: 12px;
+}
+
+.pro-desc p span {
+  margin-left: 8px;
+}
+
+.tabs {
+  margin-right: 32px;
+  margin-bottom: 24px;
+}
+
+.pro-name h6 {
+  font-family: "DMSeri";
+  font-size: 24px;
+}
+
+.pro-name p {
+  margin-bottom: 20px;
+  color: #323232;
+}
+
+.pro-policy .nav-tabs li a {
+  font-size: 16px;
+  color: #202020;
+  border-bottom: solid 1px transparent;
+}
+.product-info-compacted p {
+  color: #323232;
+}
+.pro-desc span {
+  color: #111111;
+  display: inline-block;
+  min-width: 84px;
+  margin-right: 15px;
+  font-family: "InterSB";
+  color: #111111;
+}
+
+@font-face {
+  font-family: DMSeri;
+  src: url(../../public/fonts/DMSerifText-Regular.woff);
+}
+
+@font-face {
+  font-family: interSB;
+  src: url(../../public/fonts/Inter-SemiBold.woff);
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+}
+
+.tabs {
+}
+
+.YMALSectionHead h4 {
+  font-size: 32px;
+}
