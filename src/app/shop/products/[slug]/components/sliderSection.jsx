@@ -44,7 +44,7 @@ function sliderSection() {
                   >
                     <SwiperSlide
                       onClick={() => setActiveIndex(0)}
-                      className={`max-w-[68px] max-h-[88px] mb-[8px]  cursor-pointer
+                      className={`max-w-[68px] min-w-[68px] max-h-[88px] mb-[8px]  cursor-pointer
                                       ${
                                         activeIndex === 0
                                           ? "border-2  blur-0"

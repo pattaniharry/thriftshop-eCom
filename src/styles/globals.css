@@ -312,3 +312,37 @@ h4 {
 .YMALSectionHead h4 {
   font-size: 32px;
 }
+
+.image-box-div,
+.detail-div {
+  background-color: white;
+}
+
+.contact-us-info img {
+  margin-right: 10px;
+}
+
+.your-info label {
+  font-size: 12px;
+
+  color: #8d8d8d;
+}
+
+.contact-form-text-box input:focus {
+  outline: none;
+}
+
+.tabs:focus {
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.tablist button:focus {
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#headlessui-disclosure-panel-«R4cfel7 {
+}
